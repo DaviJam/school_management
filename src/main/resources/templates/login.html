@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Se connecter</title>
+</head>
+<body>
+
+<h2>Application en cours de maintenance</h2>
+
+<h1 class="main-title">Accéder à l'application de gestion d'établissement</h1>
+<p class="sub-t">Vous devez vous connecter avant de pouvoir continuer</p>
+
+<form th:action="@{/login}" th:object="${loginForm}" method="post" class="form">
+    <div class="form-input-container">
+        <label>Nom d'utilisateur :</label>
+        <input name="username" class="form-control form-full-w" type="text" placeholder="jeandupont@gmail.com">
+    </div>
+
+    <div class="form-input-container">
+        <label>Mot de passe :</label>
+        <input name="password" class="form-control form-full-w" type="password" placeholder="123456">
+    </div>
+    <span th:if="${param.error}">Identifiant ou mot de passe incorrect</span>
+    <input type="submit" class="btn" value="Se connecter">
+</form>
+</body>
+</html>

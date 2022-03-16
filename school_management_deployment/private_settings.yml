@@ -1,0 +1,2 @@
+MYSQL_PASSWORD: *****
+WORKING_DIR: /home/ubuntu/project/
